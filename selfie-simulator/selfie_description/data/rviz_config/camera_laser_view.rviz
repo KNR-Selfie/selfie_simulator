@@ -154,7 +154,7 @@ Visualization Manager:
     - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
-      Image Topic: /camera/zed/rgb/image_rect_color
+      Image Topic: /image_raw
       Name: Camera
       Overlay Alpha: 0.5
       Queue Size: 2
