@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import rospy
-import pynput
 
 from ackermann_msgs.msg import AckermannDriveStamped
 
@@ -38,7 +37,9 @@ def vels(speed,turn):
 
 if __name__=="__main__":
   settings = termios.tcgetattr(sys.stdin)
-  pub = rospy.Publisher('/keyboard_steering_ackermann/teleop', AckermannDriveStamped, queue_size=5)
+  sub = rospy.Subscriber('/drive', AckermannDriveStamped, queue_size=5)
+
+  pub = rospy.Publisher('/drive', AckermannDriveStamped, queue_size=5)
   rospy.init_node('keyop')
 
   x = 0

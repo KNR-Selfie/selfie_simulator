@@ -37,7 +37,7 @@ def servo_commands():
 
     rospy.init_node('servo_throttle_commands', anonymous=True)
 
-    rospy.Subscriber("/keyboard_steering_ackermann/teleop", AckermannDriveStamped, set_throttle_steer)
+    rospy.Subscriber("/sim_drive", AckermannDriveStamped, set_throttle_steer)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
