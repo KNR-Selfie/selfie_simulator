@@ -4,7 +4,7 @@
     <include>
       <uri>model://selfie_description/models/carollo_track_v1</uri>
       <name>track</name>
-      <pose>3.78 4.99 0 0 0 0</pose>
+      <pose>3.78 4.56 0 0 0 0</pose>
     </include>
     <include>
       <uri>model://sun</uri>
@@ -49,7 +49,7 @@
     <include>
       <uri>model://selfie_description/models/box</uri>
       <name>box8</name>
-      <pose>6.06 0.96 0.05 0 0 0</pose>
+      <pose>6.16 0.96 0.05 0 0 0</pose>
     </include>
 
   </world>
