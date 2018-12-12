@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <sdf version="1.4">
-  <world name="carollo_track_v0">
+  <world name="missing_lines">
     <include>
-      <uri>model://selfie_description/models/carollo_track_v0</uri>
+      <uri>model://selfie_description/models/missing_lines</uri>
       <name>track</name>
       <pose>5.74 2.33 0 0 0 0</pose>
     </include>
