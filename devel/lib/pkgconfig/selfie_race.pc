@@ -1,0 +1,8 @@
+prefix=/home/rav/catkin_ws/src/selfie_carolocup2019_simulator/devel
+
+Name: selfie_race
+Description: Description of selfie_race
+Version: 0.0.0
+Cflags: -I/home/rav/catkin_ws/src/selfie_carolocup2019_simulator/devel/include
+Libs: -L/home/rav/catkin_ws/src/selfie_carolocup2019_simulator/devel/lib 
+Requires: roscpp rospy sensor_msgs std_msgs geometry_msgs
