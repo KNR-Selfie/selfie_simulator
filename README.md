@@ -22,7 +22,7 @@ roslaunch selfie_race generated.launch
 
 "/sim_drive"
  ([ackermann_msgs/AckermannDriveStamped](http://docs.ros.org/api/ackermann_msgs/html/msg/AckermannDriveStamped.html))
- This topic is where you can put your steering commands to drive Selfie in simulator
+ Don't publish to this topic directly, because sim_manager node takes care of all the steering stuff including switches between different drive modes.
 
 ### Published topics
 "/camera_raw" 
