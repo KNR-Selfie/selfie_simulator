@@ -1,2 +1,0 @@
-selfie-simulator/selfie_description:selfie-simulator/selfie_gazebo:selfie-simulator/selfie_sim_control:selfie_race
--DCATKIN_DEVEL_PREFIX=/home/marcel/catkin_ws/src/simulator/devel -DCMAKE_INSTALL_PREFIX=/home/marcel/catkin_ws/src/simulator/install -G Unix Makefiles

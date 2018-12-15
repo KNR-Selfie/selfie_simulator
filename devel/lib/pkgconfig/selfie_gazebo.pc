@@ -1,8 +1,0 @@
-prefix=/home/marcel/catkin_ws/src/simulator/devel
-
-Name: selfie_gazebo
-Description: Description of selfie_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/marcel/catkin_ws/src/simulator/devel/lib 
-Requires: 

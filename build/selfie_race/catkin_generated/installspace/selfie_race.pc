@@ -1,8 +1,0 @@
-prefix=/home/marcel/catkin_ws/src/simulator/install
-
-Name: selfie_race
-Description: Description of selfie_race
-Version: 0.0.0
-Cflags: -I/home/marcel/catkin_ws/src/simulator/install/include
-Libs: -L/home/marcel/catkin_ws/src/simulator/install/lib 
-Requires: roscpp rospy sensor_msgs std_msgs geometry_msgs
