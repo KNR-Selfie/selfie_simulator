@@ -1,8 +1,0 @@
-prefix=/home/rav/catkin_ws/src/selfie_carolocup2019_simulator/devel
-
-Name: selfie_sim_control
-Description: Description of selfie_sim_control
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/rav/catkin_ws/src/selfie_carolocup2019_simulator/devel/lib 
-Requires: 
