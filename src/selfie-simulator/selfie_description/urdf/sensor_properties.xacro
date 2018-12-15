@@ -32,4 +32,11 @@
     <distortionT1>0.0</distortionT1>
     <distortionT2>0.0</distortionT2>
   </xacro:macro>
+
+  <xacro:macro name="lens_joint_pose">
+    <origin xyz="0 0 0.4" rpy="0 0.26 0"/>  <!--26-->
+    <parent link="base_camera_link"/>
+    <child link="camera_link"/>
+    <axis xyz="0 0 1" />
+  </xacro:macro>
 </robot>

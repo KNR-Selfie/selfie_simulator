@@ -2,6 +2,7 @@
 <robot name="selfie" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find selfie_description)/urdf/macros.xacro" />
+  <xacro:include filename="$(find selfie_description)/urdf/selfie.gazebo" />
 
   <!-- Add chassis and it's inertia link -->
 
@@ -255,15 +256,11 @@
   </link>
 
   <joint name="lens_joint" type="fixed">
-    <origin xyz="0 0 0.4" rpy="0 0.26 0"/>
-    <parent link="base_camera_link"/>
-    <child link="camera_link"/>
-    <axis xyz="0 0 1" />
+    <xacro:lens_joint_pose/>
   </joint>
 
 
 
-<xacro:include filename="$(find selfie_description)/urdf/selfie.gazebo" />
 <xacro:include filename="$(find selfie_description)/urdf/materials.xacro" />
 
 </robot>
