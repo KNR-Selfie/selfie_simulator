@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/marcel/catkin_ws/src/simulator/install/setup.sh

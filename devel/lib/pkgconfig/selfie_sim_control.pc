@@ -1,0 +1,8 @@
+prefix=/home/marcel/catkin_ws/src/simulator/devel
+
+Name: selfie_sim_control
+Description: Description of selfie_sim_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/marcel/catkin_ws/src/simulator/devel/lib 
+Requires: 
