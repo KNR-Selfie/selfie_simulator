@@ -2,3 +2,8 @@ src/selfie-simulator/selfie_gazebo/worlds/generator_world
 src/selfie-simulator/selfie_gazebo/worlds/generator_worlds_history/*
 build
 devel
+src/selfie-simulator/selfie_gazebo/generator/commonroad/__pycache__/*
+src/selfie-simulator/selfie_gazebo/generator/commonroad/renderer/__pycache__/*
+src/selfie-simulator/selfie_gazebo/generator/commonroad/generator/__pycache__/*
+
+
