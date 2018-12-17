@@ -5,11 +5,12 @@ from pynput import keyboard
 
 class msg_manager:
     # 1 -> manually     2-> semi semi_automat   3-> full automat
-    def __init__(self, steering_mode = 1, msg_full_auto = AckermannDriveStamped(),
+    def __init__(self, steering_mode = 1, force_stop = 0, msg_full_auto = AckermannDriveStamped(),
                 msg_semi_auto = AckermannDriveStamped(),msg_manual = AckermannDriveStamped(),
                 default_speed = 0.5, default_left = 0.4, default_right = -0.4,
                 speed = 0, steering_angle = 0):
         self.steering_mode = steering_mode
+        self.force_stop = force_stop
         self.msg_full_auto = msg_full_auto
         self.msg_semi_auto = msg_semi_auto
         self.msg_manual = msg_manual
@@ -37,29 +38,58 @@ class msg_manager:
                     self.steering_mode = 2
 
                 elif self.steering_mode == 2:
-                    rospy.loginfo('FULL_automat mode')
+                    rospy.loginfo('steering try mode \n use ad to turn wheels in place')
                     self.steering_mode = 3
 
                 elif self.steering_mode == 3:
                     rospy.loginfo('MANUAL mode')
                     self.steering_mode = 1
+            if(key.char == 'r'):
+                if(self.force_stop == 1):
+                    self.speed = self.default_speed/2
+            elif (key.char == 'e'):
+                self.speed = -self.default_speed/2
+
+            if (key.char == 'f'):
+                if(self.force_stop == 0):
+                    rospy.loginfo('force stop!!!')
+                    self.force_stop = 1;
+                else:
+                    rospy.loginfo('ride')
+                    self.force_stop = 0;
 
             elif(key.char == 'a'):
-                #rospy.loginfo('left')
-                self.speed = self.default_speed/2
-                self.steering_angle = self.default_left
+                if(self.force_stop == 1):
+                    self.steering_angle = self.default_left
+                    #self.speed = 0
+                else:
+                    #rospy.loginfo('left')
+                    self.speed = self.default_speed/2
+                    self.steering_angle = self.default_left
             elif(key.char =='d'):
-                #rospy.loginfo('right')
-                self.speed = self.default_speed/2
-                self.steering_angle = self.default_right
+                if(self.force_stop == 1):
+                    self.steering_angle = self.default_right
+                    #self.speed = 0
+                else:
+                    #rospy.loginfo('right')
+                    self.speed = self.default_speed/2
+                    self.steering_angle = self.default_right
             elif(key.char == 'w'):
-                #rospy.loginfo('forward')
-                self.speed = self.default_speed
-                self.steering_angle = 0
+                if(self.force_stop == 1):
+                    self.steering_angle = self.default_left*2
+                    #self.speed = 0
+                else:
+                    #rospy.loginfo('forward')
+                    self.speed = self.default_speed
+                    self.steering_angle = 0
             elif(key.char == 's'):
-                #rospy.loginfo('backwards')
-                self.speed = - self.default_speed
-                self.steering_angle = 0
+                if(self.force_stop == 1):
+                    self.steering_angle = self.default_right*2
+                    #self.speed = 0
+                else:
+                    #rospy.loginfo('backwards')
+                    self.speed = - self.default_speed
+                    self.steering_angle = 0
 
         except AttributeError:
             pass
@@ -67,7 +97,7 @@ class msg_manager:
 
     def on_release(self, key):
         try:
-            if key.char == 'w' or key.char == 's' or key.char == 'd' or key.char == 'a' or key == keyboard.Key.space:
+            if key.char == 'w' or key.char == 's' or key.char == 'd' or key.char == 'a' or  key.char == 'r' or key.char == 'e' or key == keyboard.Key.space:
                 self.speed = 0
                 self.steering_angle = 0
             elif key == keyboard.Key.esc:

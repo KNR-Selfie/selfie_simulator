@@ -47,9 +47,9 @@
 <!-- geometry macros -->
 
 <xacro:macro name="chassis_geometry">
-  <origin xyz="0 0 0" rpy="0 0 0" />
+  <origin xyz="0.11 0 0" rpy="0 0 0" /> <!-- origin xyz="-0.08 0 0" rpy="0 0 0"-->
   <geometry>
-    <mesh filename="package://selfie_description/meshes/chassis.STL" />
+    <mesh filename="package://selfie_description/meshes/my_chasis.STL" />
   </geometry>
 </xacro:macro>
 
@@ -99,14 +99,14 @@
 <xacro:macro name="left_wheels_collision_geometry">
   <origin xyz="0 0 -0.0225" rpy="0 0 0" />
   <geometry>
-    <cylinder length="0.045" radius="0.05" />
+    <cylinder length="0.03" radius="0.03" />
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_wheels_collision_geometry">
   <origin xyz="0 0 0.0225" rpy="0 0 0" />
   <geometry>
-    <cylinder length="0.045" radius="0.05" />  <!-- changed from 0.045   -->
+    <cylinder length="0.03" radius="0.03" />  <!-- changed from 0.045   -->
   </geometry>
 </xacro:macro>
 
