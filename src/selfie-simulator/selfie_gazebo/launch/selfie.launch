@@ -5,7 +5,7 @@
   <arg name="run_camera" default="true"/>
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
-  <arg name="z" default="0.05"/>
+  <arg name="z" default="0.08"/>
   <arg name="Y" default="0"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find selfie_gazebo)/worlds/$(arg world_name).world"/>

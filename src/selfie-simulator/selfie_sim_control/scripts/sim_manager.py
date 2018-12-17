@@ -38,7 +38,7 @@ class msg_manager:
                     self.steering_mode = 2
 
                 elif self.steering_mode == 2:
-                    rospy.loginfo('steering try mode \n use ad to turn wheels in place')
+                    rospy.loginfo('FULL_automat mode')
                     self.steering_mode = 3
 
                 elif self.steering_mode == 3:
@@ -97,7 +97,7 @@ class msg_manager:
 
     def on_release(self, key):
         try:
-            if key.char == 'w' or key.char == 's' or key.char == 'd' or key.char == 'a' or  key.char == 'r' or key.char == 'e' or key == keyboard.Key.space:
+            if key.char == 'w' or key.char == 's' or key.char == 'd' or key.char == 'a' or  key.char == 'r' or key.char == 'e' or key.char == 'f' or key == keyboard.Key.space:
                 self.speed = 0
                 self.steering_angle = 0
             elif key == keyboard.Key.esc:
