@@ -5,8 +5,8 @@
   
   <include file="$(find selfie_gazebo)/launch/selfie.launch">
     <arg name="world_name" value="generator_world/world"/>
-    <arg name="x" value="0"/>
-    <arg name="y" value="0"/>
+    <arg name="x" value="0.2"/>
+    <arg name="y" value="-0.2"/>
     <arg name="Y" value="0"/>    
   </include>
 
