@@ -57,28 +57,28 @@
 <xacro:macro name="left_rear_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://selfie_description/meshes/left_rear_wheel.STL" />
+    <mesh filename="package://selfie_description/meshes/selfie_left_rear_wheel.STL" />
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_rear_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://selfie_description/meshes/right_rear_wheel.STL" />
+    <mesh filename="package://selfie_description/meshes/selfie_right_rear_wheel.STL" />
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="left_front_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://selfie_description/meshes/left_front_wheel.STL" />
+    <mesh filename="package://selfie_description/meshes/selfie_left_front_wheel.STL" />
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_front_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://selfie_description/meshes/right_front_wheel.STL" />
+    <mesh filename="package://selfie_description/meshes/selfie_right_front_wheel.STL" />
   </geometry>
 </xacro:macro>
 

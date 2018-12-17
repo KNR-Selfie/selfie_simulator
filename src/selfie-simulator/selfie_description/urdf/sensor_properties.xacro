@@ -34,7 +34,7 @@
   </xacro:macro>
 
   <xacro:macro name="lens_joint_pose">
-    <origin xyz="0 0 0.4" rpy="0 0.26 0"/>  <!--26-->
+    <origin xyz="0 0 0.35" rpy="0 0.26 0"/>  <!--26-->
     <parent link="base_camera_link"/>
     <child link="camera_link"/>
     <axis xyz="0 0 1" />
@@ -68,7 +68,7 @@
       <noise>
         <type>gaussian</type>
         <mean>0.0</mean>
-        <stddev>0.05</stddev>
+        <stddev>0.01</stddev>
       </noise>
     </ray>
   </xacro:macro>

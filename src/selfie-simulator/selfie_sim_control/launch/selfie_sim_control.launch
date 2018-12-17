@@ -18,12 +18,10 @@
   </node>
 
   <!-- servo node -->
-  <node pkg="selfie_sim_control" type="servo_throttle_commands.py" name="servo_throttle_commands" output="screen">
-  <!--
-    <remap from="/racecar/ackermann_cmd_mux/output" to="/vesc/low_level/ackermann_cmd_mux/output"/>
+  <node pkg="selfie_sim_control" type="servo_throttle_commands.py" name="servo_throttle_commands" output="screen"/>
+  <node pkg="selfie_sim_control" type="sim_manager.py" name="sim_manager" output="screen"/>
+<!--  <node pkg="selfie_perception" type="detect_obstacles" name="detect_obstacles"/>
 -->
-  </node>
-
   <!-- Allow for Gazebo to broadcast odom -->
   <node pkg="selfie_gazebo" name="gazebo_odometry_node" type="gazebo_odometry.py" output="screen"/>
 
