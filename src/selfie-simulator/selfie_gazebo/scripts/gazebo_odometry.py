@@ -98,7 +98,7 @@ class OdometryNode:
             ),
             child_frame_id=cmd.child_frame_id,
             transform=Transform(
-                translation=p.position,
+               translation=cmd.pose.pose.position,
                 rotation=cmd.pose.pose.orientation
             )
         )
