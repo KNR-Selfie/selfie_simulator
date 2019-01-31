@@ -12,24 +12,24 @@
       <name>sun</name>
     </include>
     <include>
-      <uri>model://selfie_description/models/box</uri>
+      <uri>model://selfie_description/models/box_1</uri>
       <name>box1</name>
       <pose>3 -0.35 0.05 0 0 0</pose>
     </include>
     <include>
-      <uri>model://selfie_description/models/box</uri>
+      <uri>model://selfie_description/models/box_1</uri>
       <name>box2</name>
-      <pose>4 -0.35 0.05 0 0 0</pose>
+      <pose>3.8 -0.35 0.05 0 0 0.2</pose>
     </include>
     <include>
-      <uri>model://selfie_description/models/box</uri>
+      <uri>model://selfie_description/models/box_1</uri>
       <name>box3</name>
-      <pose>5.1 -0.35 0.05 0 0 0</pose>
+      <pose>5.2 -0.35 0.05 0 0 -0.1</pose>
     </include>
     <include>
       <uri>model://selfie_description/models/box</uri>
       <name>box4</name>
-      <pose>6.2 -0.35 0.05 0 0 0</pose>
+      <pose>5.9 -0.35 0.05 0 0 0</pose>
     </include>
     <include>
       <uri>model://selfie_description/models/box</uri>

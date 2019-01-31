@@ -167,6 +167,9 @@ Visualization Manager:
         Marker: true
         RobotModel: true
         Value: true
+        bottom_lines: true
+        box_points: true
+        free_places: true
       Zoom Factor: 1
     - Class: rviz/Marker
       Enabled: true
@@ -174,6 +177,30 @@ Visualization Manager:
       Name: Marker
       Namespaces:
         line: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /visualization_lines
+      Name: bottom_lines
+      Namespaces:
+        bottom_lines_from_parking_node: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /free_places
+      Name: free_places
+      Namespaces:
+        free_parking_place: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /box_points
+      Name: box_points
+      Namespaces:
+        box: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -201,25 +228,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.70060205
+      Distance: 4.09461546
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.37096417
-        Y: -0.228966594
-        Z: 0.0328331813
+        X: 0.462807238
+        Y: -0.403626353
+        Z: 1.04936862
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.955397785
+      Pitch: 0.725398004
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.24541759
+      Yaw: 2.57541847
     Saved: ~
 Window Geometry:
   Camera:
@@ -239,5 +266,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1855
-  X: 1985
+  X: 65
   Y: 24
