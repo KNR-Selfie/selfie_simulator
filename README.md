@@ -3,7 +3,7 @@
 ## Launching
 To launch simulator run: 
 ``` 
-roslaunch selfie_race selfie_sim.launch
+roslaunch selfie_race easy_track.launch
 ```
 
 To steer Selfie with keyboard run:
