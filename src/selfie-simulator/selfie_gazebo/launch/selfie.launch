@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="world_name" default="carollo_track_v1" />
+  <arg name="car_name" default="selfie"/>
   <arg name="gui" default="true" />
   <arg name="run_camera" default="true"/>
   <arg name="x" default="0"/>
@@ -14,10 +15,10 @@
   </include>
 
   <!-- urdf xml robot description loaded on the Parameter Server, converting the xacro into a proper urdf file-->
-  <param name="robot_description" command="$(find xacro)/xacro '$(find selfie_description)/urdf/selfie.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find $(arg car_name)_description)/urdf/racecar.xacro'" />
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
-  <node name="selfie_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model selfie -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg Y)"/>
+  <node name="selfie_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model selfie -x $(arg x) -y $(arg y) -z $(arg z)"/>
 
   <!-- ros_sim_control selfie launch file -->
   <include file="$(find selfie_sim_control)/launch/selfie_sim_control.launch" ns="/"/>
