@@ -52,11 +52,11 @@ class msg_manager:
 
             if (key.char == 'f'):
                 if(self.force_stop == 0):
-                    rospy.loginfo('force stop!!!')
-                    self.force_stop = 1;
+                    rospy.logwarn('stop mode')
+                    self.force_stop = 1
                 else:
-                    rospy.loginfo('ride')
-                    self.force_stop = 0;
+                    rospy.logwarn('ride mode')
+                    self.force_stop = 0
 
             elif(key.char == 'a'):
                 if(self.force_stop == 1):
