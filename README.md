@@ -8,7 +8,7 @@ roslaunch selfie_race easy_track.launch
 
 To steer Selfie with keyboard run:
 ```
-rosrun selfie_sim_control sim_manager.launch
+rosrun selfie_sim_control sim_manager.py
 ```
 To generate a track and launch the simulation:
 ```
