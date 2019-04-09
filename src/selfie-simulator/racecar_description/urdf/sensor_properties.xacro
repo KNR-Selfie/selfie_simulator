@@ -21,7 +21,7 @@
   <xacro:macro name="camera_plugin_params">
     <alwaysOn>true</alwaysOn>
     <updateRate>30</updateRate>    <!-- 30 -->
-    <cameraName>/camera/zed</cameraName>
+    <cameraName>/main_camera</cameraName>
     <imageTopicName>/image_raw</imageTopicName>
     <cameraInfoTopicName>/camera_info</cameraInfoTopicName>
     <frameName>camera_link</frameName>

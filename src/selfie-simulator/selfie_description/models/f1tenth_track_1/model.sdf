@@ -7,7 +7,7 @@
         <geometry>
           <plane>
             <normal> 0 0 1</normal>
-            <size>20 10</size>
+            <size>16.1325 16.1325</size>
           </plane>
         </geometry>
         <surface>
@@ -24,13 +24,15 @@
         <geometry>
           <plane>
             <normal>0 0 1</normal>
-            <size>17.881 9.820</size>
+            <size>16.1325 16.1325</size>
           </plane>
         </geometry>
         <material>
           <script>
-            <uri>model://selfie_description/models/easy_track/materials/scripts</uri>
-            <uri>model://selfie_description/models/easy_track/materials/textures</uri>
+            <uri>model://selfie_description/models/easy_track2/materials/scripts</uri>
+           <!--
+            <uri>model://selfie_description/models/easy_track2/materials/textures</uri>
+           -->
             <name>basic_track/Image</name>
           </script>
         </material>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <launch>
 
-  <include file="$(find selfie_gazebo)/launch/racecar.launch">
+  <include file="$(find selfie_gazebo)/launch/selfie_v2.launch">
 <!--    <arg name="world_name" value="carollo_track_v1"/> -->
-        <arg name="world_name" value="easy_track2"/>
+        <arg name="world_name" value="f1tenth_v1"/>
   </include>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find selfie_description)/data/rviz_config/camera_laser_view.rviz"/>
-
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find selfie_description)/data/rviz_config/f1tenth_view.rviz"/>
 
 <!--
 input topic = /sim_drive  -> AckermannDriveStamped

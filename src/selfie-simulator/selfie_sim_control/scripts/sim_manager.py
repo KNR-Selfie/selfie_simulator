@@ -7,7 +7,7 @@ class msg_manager:
     # 1 -> manually     2-> semi semi_automat   3-> full automat
     def __init__(self, steering_mode = 1, force_stop = 0, msg_full_auto = AckermannDriveStamped(),
                 msg_semi_auto = AckermannDriveStamped(),msg_manual = AckermannDriveStamped(),
-                default_speed = 0.5, default_left = 0.4, default_right = -0.4,
+                default_speed = 0.8, default_left = 0.4, default_right = -0.4,
                 speed = 0, steering_angle = 0):
         self.steering_mode = steering_mode
         self.force_stop = force_stop
