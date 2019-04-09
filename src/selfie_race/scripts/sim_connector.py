@@ -11,9 +11,9 @@ pub = rospy.Publisher('/vesc/ackermann_cmd_mux/input/teleop', AckermannDriveStam
 def vel_and_angle(data):
 	
 
-	msg = AckermannDriveStamped();
-	msg.header.stamp = rospy.Time.now();
-	msg.header.frame_id = "base_link";
+	msg = AckermannDriveStamped()
+	msg.header.stamp = rospy.Time.now()
+	msg.header.frame_id = "base_link"
 
 	msg.drive.speed = data.velocity
 	msg.drive.acceleration = 1

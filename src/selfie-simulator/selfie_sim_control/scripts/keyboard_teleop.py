@@ -57,29 +57,29 @@ if __name__=="__main__":
           th = 0
           if (key == '\x03'):
              break
-       msg = AckermannDriveStamped();
-       msg.header.stamp = rospy.Time.now();
-       msg.header.frame_id = "base_link";
+       msg = AckermannDriveStamped()
+       msg.header.stamp = rospy.Time.now()
+       msg.header.frame_id = "base_link"
 
-       msg.drive.speed = x*speed;
-       msg.drive.acceleration = 1;
-       msg.drive.jerk = 1;
+       msg.drive.speed = x*speed
+       msg.drive.acceleration = 1
+       msg.drive.jerk = 1
        msg.drive.steering_angle = th*turn
        msg.drive.steering_angle_velocity = 1
 
        pub.publish(msg)
 
   except:
-    print 'error'
+    print ('error')
 
   finally:
-    msg = AckermannDriveStamped();
-    msg.header.stamp = rospy.Time.now();
-    msg.header.frame_id = "base_link";
+    msg = AckermannDriveStamped()
+    msg.header.stamp = rospy.Time.now()
+    msg.header.frame_id = "base_link"
 
-    msg.drive.speed = 0;
-    msg.drive.acceleration = 1;
-    msg.drive.jerk = 1;
+    msg.drive.speed = 0
+    msg.drive.acceleration = 1
+    msg.drive.jerk = 1
     msg.drive.steering_angle = 0
     msg.drive.steering_angle_velocity = 1
     pub.publish(msg)

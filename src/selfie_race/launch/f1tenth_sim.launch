@@ -2,24 +2,16 @@
 <launch>
 
   <include file="$(find selfie_gazebo)/launch/selfie_v2.launch">
-<!--    <arg name="world_name" value="carollo_track_v1"/> -->
         <arg name="world_name" value="f1tenth_v1"/>
   </include>
   
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find selfie_description)/data/rviz_config/f1tenth_view.rviz"/>
 
-<!--
-input topic = /sim_drive  -> AckermannDriveStamped
-output topic = /drive ->  AckermannDriveStamped
-steering:
-'wsad' ->  forward, backwards, left, right
-'space' ->  steering mode (manual, semi-automat, full-automat)  READ CONSOLE !!
-'f' ->  drive/stop  READ CONSOLE as well.
+  
+  <node name="sim_manager" pkg="selfie_sim_control" type="sim_manager.py" output="screen">
+  <!--  <param name="sim_speed" value="0.2"/> -->
+  </node>
 
 
-works in the background, so signals will be send if u dont quit the program
-QUIT app if you want to stay in one place
--->
-  <node name="sim_manager" pkg="selfie_sim_control" type="sim_manager.py" output="screen"/>
 
 </launch>

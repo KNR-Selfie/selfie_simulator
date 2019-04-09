@@ -6,19 +6,21 @@ from pynput import keyboard
 class msg_manager:
     # 1 -> manually     2-> semi semi_automat   3-> full automat
     def __init__(self, steering_mode = 1, force_stop = 0, msg_full_auto = AckermannDriveStamped(),
-                msg_semi_auto = AckermannDriveStamped(),msg_manual = AckermannDriveStamped(),
-                default_speed = 0.8, default_left = 0.4, default_right = -0.4,
-                speed = 0, steering_angle = 0):
+                msg_semi_auto = AckermannDriveStamped(),msg_manual = AckermannDriveStamped(), 
+                default_left = 0.4, default_right = -0.4, speed = 0, steering_angle = 0):
         self.steering_mode = steering_mode
         self.force_stop = force_stop
         self.msg_full_auto = msg_full_auto
         self.msg_semi_auto = msg_semi_auto
         self.msg_manual = msg_manual
-        self.default_speed = default_speed
+        self.default_speed = rospy.get_param("sim_speed", 0.4)
+        rospy.logwarn('sim_speed = ' + str(self.default_speed))
         self.default_left = default_left
         self.default_right = default_right
         self.speed = speed
         self.steering_angle = steering_angle
+
+
 
     def pid_callback(self, data):
         # full automat

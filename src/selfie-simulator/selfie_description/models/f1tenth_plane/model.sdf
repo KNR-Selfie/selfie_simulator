@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <sdf version="1.4">
-  <model name="basic_track_ground_plane">
+  <model name="f1tenth_ground_plane">
     <static>true</static>
     <link name="track">
       <collision name="collision">
         <geometry>
           <plane>
             <normal> 0 0 1</normal>
-            <size>20 20</size>
+            <size>30 50</size>
           </plane>
         </geometry>
         <surface>
@@ -24,13 +24,13 @@
         <geometry>
           <plane>
             <normal>0 0 1</normal>
-            <size>20 20</size>
+            <size>30 50</size>
           </plane>
         </geometry>
         <material>
           <script>
-            <uri>model://selfie_description/models/easy_track/materials/scripts</uri>
-            <uri>model://selfie_description/models/easy_track/materials/textures</uri>
+            <uri>model://selfie_description/models/f1tenth_plane/materials/scripts</uri>
+            <uri>model://selfie_description/models/f1tenth_plane/materials/textures</uri>
             <name>basic_track/Image</name>
           </script>
         </material>
