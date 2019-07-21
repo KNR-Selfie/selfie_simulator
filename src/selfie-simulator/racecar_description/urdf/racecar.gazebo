@@ -63,13 +63,26 @@
 
   <!-- hokuyo -->
 <xacro:unless value="$(optenv DISABLE_GAZEBO_LASER false)">
-  <gazebo reference="laser">
+  <gazebo reference="left_laser">
     <material>Gazebo/Grey</material>
-    <sensor type="ray" name="hokuyo_sensor">
+    <sensor type="ray" name="left_hokuyo_sensor">
       <xacro:lidar_params/>
       <plugin name="gazebo_ros_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/scan</topicName>
-        <frameName>laser</frameName>
+        <topicName>/left_laser</topicName>
+        <frameName>left_laser</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+</xacro:unless>
+
+<xacro:unless value="$(optenv DISABLE_GAZEBO_LASER false)">
+  <gazebo reference="right_laser">
+    <material>Gazebo/Grey</material>
+    <sensor type="ray" name="right_hokuyo_sensor">
+      <xacro:lidar_params/>
+      <plugin name="gazebo_ros_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/right_laser</topicName>
+        <frameName>right_laser</frameName>
       </plugin>
     </sensor>
   </gazebo>

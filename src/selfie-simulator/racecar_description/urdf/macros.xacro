@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <robot name="selfie" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<xacro:property name="wheel_radius" value="0.055" />
+<xacro:property name="wheel_lenght" value="0.045" />
+<!-- chassis to nadwzoize ktore dla uproszczenia uznaje za prostopadloscian -->
+<xacro:property name="chassis_x" value="0.33" />
+<xacro:property name="chassis_y" value="0.2" />
+<xacro:property name="chassis_z" value="0.1" />
+
 <!-- inertial parameter macros -->
 
 <xacro:macro name="chassis_inertial_params">
@@ -49,7 +56,7 @@
 <xacro:macro name="chassis_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://racecar_description/meshes/chassis.stl" />
+    <box size="${chassis_x} ${chassis_y} ${chassis_z}"/>
   </geometry>
 </xacro:macro>
 
@@ -57,28 +64,28 @@
 <xacro:macro name="left_rear_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://racecar_description/meshes/left_wheel.stl" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_rear_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://racecar_description/meshes/right_wheel.stl" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="left_front_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://racecar_description/meshes/left_wheel.stl" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_front_wheel_geometry">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <geometry>
-    <mesh filename="package://racecar_description/meshes/right_wheel.stl" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
   </geometry>
 </xacro:macro>
 
@@ -99,14 +106,21 @@
 <xacro:macro name="left_wheels_collision_geometry">
   <origin xyz="0 0 -0.0225" rpy="0 0 0" />
   <geometry>
-    <cylinder length="0.045" radius="0.05" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
   </geometry>
 </xacro:macro>
 
 <xacro:macro name="right_wheels_collision_geometry">
   <origin xyz="0 0 0.0225" rpy="0 0 0" />
   <geometry>
-    <cylinder length="0.045" radius="0.05" />
+    <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
+  </geometry>
+</xacro:macro>
+
+<xacro:macro name="lidars_main_plate">
+  <origin xyz="0 0 0" rpy="0 0 0" />
+  <geometry>
+    <mesh filename="package://racecar_description/meshes/lidars_main_plate.stl" />
   </geometry>
 </xacro:macro>
 

@@ -43,7 +43,7 @@
   <xacro:macro name="lidar_pose">
     <origin xyz="0.2 0.0 0.075" rpy="0 0 0"/>
     <parent link="chassis" />
-    <child link="laser" />
+    <child link="left_laser" />
     <axis xyz="0 0 1" />
   </xacro:macro>
 
