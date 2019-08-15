@@ -23,6 +23,6 @@
   <node pkg="selfie_perception" type="detect_obstacles" name="detect_obstacles"/>
 -->
   <!-- Allow for Gazebo to broadcast odom -->
-  <node pkg="selfie_gazebo" name="gazebo_odometry_node" type="gazebo_odometry.py" output="screen"/>
+  <node pkg="selfie_gazebo" name="gazebo_odometry_node" type="gazebo_odometry.py" output="screen"/> 
 
 </launch>
