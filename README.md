@@ -2,10 +2,12 @@
 
 ## Launching
 To launch simulator run: 
+* CaroloCup:
 ``` 
-CaroloCup:
  roslaunch selfie_race easy_track.launch
-F1Tenth:
+```
+* F1Tenth:
+```
  roslaunch selfie_race f1tenth_sim.launch
 ```
 
