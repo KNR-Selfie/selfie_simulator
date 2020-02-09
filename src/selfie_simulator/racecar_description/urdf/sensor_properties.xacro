@@ -22,7 +22,7 @@
     <alwaysOn>true</alwaysOn>
     <updateRate>30</updateRate>    <!-- 30 -->
     <cameraName>/main_camera</cameraName>
-    <imageTopicName>/image_raw</imageTopicName>
+    <imageTopicName>/image_rect</imageTopicName>
     <cameraInfoTopicName>/camera_info</cameraInfoTopicName>
     <frameName>camera_link</frameName>
     <hackBaseline>0</hackBaseline><!-- set this to 0.12 for the second camera -->
